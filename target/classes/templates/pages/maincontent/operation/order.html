@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" th:fragment="MainContent">
+    <!-- Content Header (页眉) -->
+    <section class="content-header">
+        <h1>
+            设备定制指令
+            <small>添加页面</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+            <li><a href="#">表单</a></li>
+            <li class="active">常规表单元素</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <!-- select -->
+            <div class="form-group col-md-3">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">设备类型 <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">水分监测</a></li>
+                            <li><a href="#">甲烷检测器</a></li>
+                            <li><a href="#">红外测距</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">全部类型</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" aria-label="..." placeholder="设备类型未知">
+                </div>
+            </div>
+            <div class="form-group col-md-3">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">操作类型 <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">读取AI</a></li>
+                            <li><a href="#">控制DO</a></li>
+                            <li><a href="#">读取DI</a></li>
+                            <li role="separator" class="divider"></li>
+                            <li><a href="#">通播指令</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" aria-label="..." placeholder="暂未选择操作类型...">
+                </div>
+            </div>
+            <form action="#" method="post" class="col-md-3">
+                <div class="input-group ">
+                    <input type="text" name="message" placeholder="输入IP" class="form-control">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-primary btn-flat">搜索</button>
+                      </span>
+                </div>
+            </form>
+        </div>
+        <br>
+        <div class="box box-success box-header with-border">
+        </div>
+        <div class="box-body ">
+            <table id="example2" class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>设备ID</th>
+                    <th>IP：port</th>
+                    <th>设备类型</th>
+                    <th>创建时间</th>
+                    <th>操作类型</th>
+                    <th>基本地址</th>
+                    <th>计数位</th>
+                    <th>指令</th>
+                    <th>寄存器地址</th>
+                    <th>状态码</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>0102</td>
+                    <td>192.168.2.34:502</td>
+                    <td>甲烷检测器</td>
+                    <td>2019.12.23.12:22</td>
+                    <td>
+                        <button type="button" class="btn btn-danger">控制DO</button>
+                    </td>
+                    <td>0000</td>
+                    <td>06</td>
+                    <td>0105</td>
+                    <td>0000</td>
+                    <td>ff00</td>
+                    <td>
+                        <div class="btn-block">
+                            <button type="button" class="btn btn-danger">编辑</button>
+                            <button type="button" class="btn btn-info">查看</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0103</td>
+                    <td>192.168.2.13:502</td>
+                    <td>红外测距</td>
+                    <td>2020.3.25.6:56</td>
+                    <td>
+                        <button type="button" class="btn btn-success">读取DI</button>
+                    </td>
+                    <td>0000</td>
+                    <td>06</td>
+                    <td>0101</td>
+                    <td>0000</td>
+                    <td>0008</td>
+                    <td>
+                        <div class="btn-block">
+                            <button type="button" class="btn btn-danger">编辑</button>
+                            <button type="button" class="btn btn-info">查看</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>0103</td>
+                    <td>192.168.2.13:502</td>
+                    <td>瓦斯预警</td>
+                    <td>2020.3.25.6:56</td>
+                    <td>
+                        <button type="button" class="btn btn-warning">读取DO</button>
+                    </td>
+                    <td>0000</td>
+                    <td>06</td>
+                    <td>0104</td>
+                    <td>0000</td>
+                    <td>0008</td>
+                    <td>
+                        <div class="btn-block">
+                            <button type="button" class="btn btn-danger">编辑</button>
+                            <button type="button" class="btn btn-info">查看</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+                <tfoot>
+                </tfoot>
+            </table>
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+    <script src="/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#example2').DataTable({
+                'paging': true,
+                'lengthChange': false,
+                'searching': false,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+        })
+    </script>
+    <style>
+        #example2 td {
+            text-align: center;
+        }
+
+        #example2 th {
+            text-align: center;
+        }
+    </style>
+</div>
+<!-- page script -->
+</body>
+</html>

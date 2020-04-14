@@ -1,0 +1,48 @@
+server:
+  port: 8081
+spring:
+#   数据库连接配置
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#   thymeleaf文件映射配置
+  thymeleaf:
+    #  配置缓存为false才能看见实时网页效果
+    cache: false
+    suffix: .html
+    prefix: classpath:/templates/
+    mode: HTML
+#    servlet:
+#      content-type: text/html
+  #    热部署
+  devtools:
+#    livereload:
+#      enabled: true
+    restart:
+#      排除静态文件
+      exclude: static/**,
+  mvc:
+#    设置默认静态资源地址
+    static-path-pattern: /**
+  resources:
+    add-mappings: true
+    chain:
+      strategy:
+        content:
+          enabled: true
+          paths: /**
+
+mybatis:
+  mapper-locations: classpath:mapping/*.xml
+  type-aliases-package: fun.kwan.iodms.entity
+
+#  show  SQL
+#logging:
+#  level:
+#    fun:
+#      kwan:
+#        iodms:
+#          mapper: debug

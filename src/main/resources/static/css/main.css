@@ -1,0 +1,60 @@
+p {
+    background-color: red;
+    height: 500px;
+    width: 30%;
+    padding: 20px;
+    margin: 20px;
+    float: left;
+}
+
+div {
+    background-color: green;
+    height: 50px;
+    width: 40%;
+    padding: 20px;
+    margin: 20px;
+}
+
+span {
+    background-color: gray;
+    height: 70px;
+    padding: 40px;
+    margin: 20px;
+    float: left;
+    width: 200px;
+}
+
+strong {
+    background-color: blue;
+    height: 70px;
+    padding: 40px;
+    margin: 20px;
+}
+
+
+#app {
+    display: block;
+    padding: 0px;
+    margin: 0px;
+    float: left;
+
+}
+
+#main {
+    width: 300px;
+    height: 500px;
+    align-content: center;
+    alignment: center;
+    child-align: auto;
+    background-color: #eeff00;
+    display: inline-block;
+}
+
+.clsmain {
+    width: 500px;
+    height: 400px;
+    background-color: #f0f;
+    alignment: center;
+    display: inline-block;
+
+}

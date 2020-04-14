@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar" th:fragment="mainsidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- Sidebar user panel -->
+        <div class="user-panel">
+            <div class="pull-left image">
+                <img src="../../dist/img/user2-160x160.jpg" class="img-circle" alt="用户图像">
+            </div>
+            <div class="pull-left info">
+                <p>Admin online</p>
+                <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
+            </div>
+        </div>
+        <!-- search form -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="搜索...">
+                <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- sidebar menu: : style can be found in sidebar.less -->
+        <ul class="sidebar-menu" data-widget="tree">
+            <li class="header">主导航</li>
+
+            <!--    仪器查看sidebar        -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-dashboard"></i> <span>仪器查看</span>
+                    <span class="pull-right-container">
+                    <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/device/summary"><i class="fa fa-circle-o"></i>总览情况</a></li>
+                    <li><a href="/device/list"><i class="fa fa-circle-thin"></i>仪器列表</a></li>
+                    <li><a href="/device/log"><i class="fa fa-location-arrow"></i>日志记录</a></li>
+                    <li><a href="/device/search"><i class="fa fa-search"></i>设备搜索</a></li>
+                </ul>
+            </li>
+
+            <!--    设备管理sidebar        -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-th"></i> <span>设备管理</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/manage/search"><i class="fa fa-circle-o"></i>搜索设备</a></li>
+                    <li><a href="/manage/category"><i class="fa fa-shopping-basket"></i>分类显示</a></li>
+                    <li><a href="/manage/warn"><i class="fa fa-clone"></i>规则设定</a></li>
+                    <li><a href="/manage/range"><i class="fa fa-registered"></i>设备可测范围</a></li>
+                    <li><a href="/manage/param"><i class="fa fa-code"></i>设备参数</a></li>
+                </ul>
+            </li>
+            <!--    操作台sidebar        -->
+            <li class="treeview">
+                <a href="#">
+                    <i class="fa fa-opera"></i> <span>操作台</span>
+                    <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li><a href="/operation/order"><i class="fa fa-search"></i>定制指令</a></li>
+                    <li><a href="/operation/send"><i class="fa fa-exchange"></i>指令解析</a></li>
+                    <li><a href="/operation/heartbeat"><i class="fa fa-archive"></i>心跳上报</a></li>
+                </ul>
+            </li>
+
+
+            <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>文档</span></a></li>
+            <li class="header">标签</li>
+            <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>重要</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>警告</span></a></li>
+            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>信息</span></a></li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+    <script>
+        //获取当前窗口的路径
+        var clist = document.getElementsByClassName("treeview");
+        var url = document.URL;
+
+        // console.log(window.location.href + "  "+ url)
+        // console.log(list)
+
+        for (var i = 0; i < clist.length; i++) {
+            var alist = clist[i].getElementsByTagName('a')
+            for (var j = 0; j < alist.length; j++) {
+                // console.log(alist[j].href+"   "+j);
+                if (alist[j].href == url) {
+                    // 一级目录下的菜单active
+                    var target = alist[j].parentElement.parentElement.parentElement;
+                    var list = target.classList;
+                    list.add('active');
+                    // 二级目录下的按钮名字active
+                    var inner = alist[j].parentElement;
+                    var innerlist = inner.classList;
+                    innerlist.add('active');
+                }
+            }
+        }
+    </script>
+</aside>
+
+</html>

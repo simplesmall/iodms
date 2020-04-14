@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!--<div th:replace="base.html"></div> https://blog.csdn.net/laidanlove250/article/details/93499126  -->
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/>
+<body>
+<!--简单的测试th:if 以及th:text的案例-->
+<div id="if">
+    <span th:if="${return}" th:text="${return}">是否返回了</span>
+    <br>
+    <span th:if="${name}" th:utext="${name}">utext的Placeholder</span>
+</div>
+<!--第一种使用object传递对象元素的案例-->
+<div th:if="${user != null}" id="object1">
+    <p th:text="'用户编号：' + ${user.getId()}"/>
+    <p th:text="'Real name：' + ${user.getRealName()}"/>
+    <p th:text="'Password：' + ${user.getPassWord()}"/>
+    <p th:text="'Username：' + ${user.getUserName()}"/>
+</div>
+
+<!--第二种使用Object的方式-->
+<div th:if="${user}" th:object="${user}" id="object2">
+    <p th:text="'Id is:'+ *{id}"></p>
+    <p th:text="'Username is:'+ *{userName}"></p>
+    <p th:text="'Password is:'+ *{passWord}"></p>
+    <p th:text="'Realname is:'+ *{realName}"></p>
+</div>
+<!--dates string sets 工具类案例，大小、下标使用案例-->
+<div th:if="${names}" id="back2front">
+    <p th:text="${#dates.format(mydate,'yyyy-MM-dd')}"/>
+    <p th:text="${#dates.format(mydate,'yyyy-MM-dd HH:mm:ss.SSS')}"/>
+    <hr/>
+    <p th:text="${#strings.replace('www.baidu.cn','.','$')}"/>
+    <p th:text="${#strings.toUpperCase('www.baidu.cn')}"/>
+    <p th:text="${#strings.trim('www.baidu.cn')}"/>
+    <hr/>
+    <p th:text="${#sets.contains(names,'boot-0')}"/>
+    <p th:text="${#sets.contains(names,'boot-9')}"/>
+    <p th:text="${#sets.size(names)}"/>
+    <hr/>
+    <p th:text="${#sets.contains(ids,0)}"/>
+    <p th:text="${ids[1]}"/>
+    <p th:text="${names[1]}"/>
+    <hr/>
+</div>
+
+<!--each使用案例-->
+<div th:if="${ids}" th:each="id : ${ids}" id="each">
+    <p th:text="${id.toString()}"></p>
+</div>
+<!--内嵌对象使用案例-->
+<div th:if="${url}" id="inner">
+    <p th:text="${#httpServletRequest.getRemoteAddr()}"/>
+    <p th:text="${#httpServletRequest.getAttribute('requestMessage')}"/>
+    <p th:text="${#httpSession.getId()}"/>
+    <p th:text="${#httpServletRequest.getServletContext().getRealPath('/')}"/>
+    <hr/>
+    <!--/*@thymesVar id="requestMessage" type=""*/-->
+    <p th:text="'requestMessage = ' + ${requestMessage}"/>
+    <p th:text="'sessionMessage = ' + ${session.sessionMessage}"/>
+    <p th:text="'applicationMessage = ' + ${application.applicationMessage}"/>
+</div>
+<!-- 以map方式接受后端返回对象集合-->
+<table th:if="${allusers}" id="mapEach">
+    <tr>
+        <td>UUID</td>
+        <td>ID</td>
+        <td>Username</td>
+        <td>Password</td>
+        <td>RealName</td>
+    </tr>
+    <tr th:each="user,allSta:${allusers}">
+        <td th:text="${allSta.index+1}"></td>
+        <td th:text="${user.key}"></td>
+        <td th:text="${user.value.userName}"></td>
+        <td th:text="${user.value.passWord}"></td>
+        <td th:text="${user.value.realName}"></td>
+    </tr>
+</table>
+
+<!-- 以list方式发送到前端的对象集合 -->
+<table th:if="${listusers}" id="listusers">
+    <tr>
+        <td>id</td>
+        <td>username</td>
+        <td>password</td>
+        <td>realname</td>
+    </tr>
+    <tr th:each="user,listSta:${listusers}">
+        <td th:text="${listSta.index+1}"></td>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.passWord}"></td>
+        <td th:text="${user.realName}"></td>
+    </tr>
+</table>
+
+
+</body>
+</html>

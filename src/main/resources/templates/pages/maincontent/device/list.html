@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<body class="hold-transition skin-blue sidebar-mini">
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper" th:fragment="MainContent">
+    <!-- Content Header (页眉) -->
+    <section class="content-header">
+        <h1>
+            数据表格
+            <small>高级表格</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> 首页</a></li>
+            <li><a href="#">表格</a></li>
+            <li class="active">数据表格</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">悬停数据表</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example2" class="table table-bordered table-hover">
+                            <thead>
+                            <tr>
+                                <th>组合设备ID</th>
+                                <th>IP：port</th>
+                                <th>组合设备类型</th>
+                                <th>创建时间</th>
+                                <th>设备状态</th>
+                                <th>操作</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0102</td>
+                                <td>192.168.2.34:502</td>
+                                <td>甲烷检测集成器</td>
+                                <td>2019.12.23.12:22</td>
+                                <td>
+                                    <button type="button" class="btn btn-danger">停止</button>
+                                </td>
+                                <td>
+                                    <div class="btn-block">
+                                        <button type="button" class="btn btn-danger">编辑</button>
+                                        <button type="button" class="btn btn-info">查看</button>
+                                        <button type="button" class="btn btn-warning">进入设备</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>0103</td>
+                                <td>192.168.2.13:502</td>
+                                <td>红外测距集成盒</td>
+                                <td>2020.3.25.6:56</td>
+                                <td>
+                                    <button type="button" class="btn btn-success">正常</button>
+                                </td>
+
+                                <td>
+                                    <div class="btn-block">
+                                        <button type="button" class="btn btn-danger">编辑</button>
+                                        <button type="button" class="btn btn-info">查看</button>
+                                        <button type="button" class="btn btn-warning">进入设备</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tfoot>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- page script -->
+    <!-- DataTables -->
+    <script src="/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <!-- page script -->
+    <script>
+        $(function () {
+            $('#example1').DataTable()
+            $('#example2').DataTable({
+                'paging': true,
+                'lengthChange': false,
+                'searching': false,
+                'ordering': true,
+                'info': true,
+                'autoWidth': false
+            })
+        })
+    </script>
+    <style>
+        #example2 td {
+            text-align: center;
+        }
+
+        #example2 th {
+            text-align: center;
+        }
+    </style>
+</div>
+
+</body>
+</html>

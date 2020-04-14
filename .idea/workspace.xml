@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6479ccf6-db59-410d-9cfa-dcb6a6c1573d" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="Kotlin File" />
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1a9Sr3XUKFZid4kmBH79Apzq08s" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/lib" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JavaWork\iodms\src\main\resources\mappingm" />
+      <recent name="D:\JavaWork\iodms\src\main\resources\templates\pages\manage" />
+      <recent name="D:\JavaWork\iodms\src\main\resources\templates\pages\maincontent\manage" />
+      <recent name="D:\JavaWork\iodms\src\main\resources\templates\pages\operation" />
+      <recent name="D:\JavaWork\iodms\src\main\resources\templates\pages\device" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JavaWork\iodms\src\test\java\fun\kwan\iodms" />
+      <recent name="D:\JavaWork\iodms\src\main\resources\mapping" />
+      <recent name="D:\JavaWork\iodms\src\main\resources\templates\pages\maincontent" />
+      <recent name="D:\JavaWork\iodms\src\main\resources\templates\pages" />
+      <recent name="D:\JavaWork\iodms\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.IodmsApplication">
+    <configuration name="IodmsApplicationTests.TestJNA" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iodms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fun.kwan.iodms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fun.kwan.iodms" />
+      <option name="MAIN_CLASS_NAME" value="fun.kwan.iodms.IodmsApplicationTests" />
+      <option name="METHOD_NAME" value="TestJNA" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IodmsApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="iodms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="fun.kwan.iodms.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="fun.kwan.iodms" />
+      <option name="MAIN_CLASS_NAME" value="fun.kwan.iodms.IodmsApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IodmsApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="iodms" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="fun.kwan.iodms.IodmsApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.IodmsApplicationTests.TestJNA" />
+        <item itemvalue="JUnit.IodmsApplicationTests.contextLoads" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6479ccf6-db59-410d-9cfa-dcb6a6c1573d" name="Default Changelist" comment="" />
+      <created>1586146511317</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1586146511317</updated>
+      <workItem from="1586146513399" duration="14394000" />
+      <workItem from="1586219603205" duration="5763000" />
+      <workItem from="1586231649235" duration="11158000" />
+      <workItem from="1586265917618" duration="12867000" />
+      <workItem from="1586322218191" duration="15977000" />
+      <workItem from="1586347860929" duration="1512000" />
+      <workItem from="1586393561826" duration="365000" />
+      <workItem from="1586394010464" duration="17152000" />
+      <workItem from="1586436509355" duration="8845000" />
+      <workItem from="1586477787987" duration="20490000" />
+      <workItem from="1586739890247" duration="159000" />
+      <workItem from="1586746516907" duration="14543000" />
+      <workItem from="1586826025213" duration="2285000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/fun/kwan/iodms/controller/UserController.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>JNATest</title>
+</head>
+<body>
+
+    <!--/*@thymesVar id="devlist" type="java"*/-->
+    <span th:text="${jna}"> </span>
+
+    <table class="tab-primary">
+        <tr th:each="port,porti:${ports}">
+            <td th:text="${porti.index+1}"></td>
+            <td th:text="${port}"> </td>
+        </tr>
+    </table>
+</body>
+</html>

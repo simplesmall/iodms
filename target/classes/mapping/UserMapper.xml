@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="fun.kwan.iodms.mapper.UserMapper">
+
+    <resultMap id="BaseResultMap" type="fun.kwan.iodms.entity.User">
+        <result column="id" jdbcType="INTEGER" property="id" />
+        <result column="userName" jdbcType="VARCHAR" property="username" />
+        <result column="passWord" jdbcType="VARCHAR" property="password" />
+        <result column="realName" jdbcType="VARCHAR" property="realname" />
+    </resultMap>
+
+    <select id="Sel" resultType="fun.kwan.iodms.entity.User">
+        select * from user where id = #{id}
+    </select>
+
+    <select id="Del">
+        delete from user  where id = #{id}
+    </select>
+
+    <update id="Upd" parameterType="fun.kwan.iodms.entity.User">
+        update USER
+        <set>
+            <if test="username != null">userName=#{username},</if>
+            <if test="password != null">password=#{password},</if>
+            <if test="realname != null">realname=#{realname},</if>
+        </set>
+        where id=#{id}
+    </update>
+</mapper>

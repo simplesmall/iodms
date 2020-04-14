@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="pages/common/head::baseHead"></head>
+<body class="hold-transition skin-blue sidebar-mini">
+
+<div class="wrapper">
+
+    <header th:replace="pages/common/header::MainHeader"></header>
+
+    <!-- Left side column. contains the logo and sidebar -->
+    <div th:replace="pages/common/mainsidebar::mainsidebar"></div>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper" th:replace="pages/maincontent/device/log::MainContent"></div>
+
+    <!-- /.content-wrapper -->
+    <div th:replace="pages/common/mainfooter::mainfooter"></div>
+    <!-- Control Sidebar -->
+    <div th:replace="pages/common/controlsidebar::controlsidebar"></div>
+    <!-- /.control-sidebar -->
+    <!-- 添加侧边栏的背景。 这个 div必须放在 control-sidebar 之后 -->
+    <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<div th:replace="pages/common/script::importScript"></div>
+</body>
+</html>
