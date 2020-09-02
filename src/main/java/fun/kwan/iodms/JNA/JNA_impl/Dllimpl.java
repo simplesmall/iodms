@@ -10,7 +10,7 @@ import com.sun.jna.Native;
 public class Dllimpl {
 
     public interface Clibrary extends Library {
-        Clibrary INSTANCE = (Clibrary) Native.load("D:\\JavaWork\\iodms\\src\\ZLDevManage", Clibrary.class);
+        Clibrary INSTANCE = (Clibrary) Native.load("D:\\JetbrainProjects\\IDEA\\iodms\\src\\ZLDevManage", Clibrary.class);
 
         boolean ZLDM_Init(int port);
 

@@ -9,7 +9,7 @@ import com.sun.jna.Native;
  */
 
 public interface Dllinterface extends Library {
-    Dllinterface INSTANCE = (Dllinterface) Native.load("D:\\JavaWork\\iodms\\src\\ZLDevManage", Dllinterface.class);
+    Dllinterface INSTANCE = (Dllinterface) Native.load("D:\\JetbrainProjects\\IDEA\\iodms\\src\\ZLDevManage.dll", Dllinterface.class);
 
     // 初始化 一旦有设 备作为客户端连接上这个端口，就可以被搜索到，实现外网设备的管理。 如果不需要外网客户端设备的管理，可以设置该参数为 0。
     boolean ZLDM_Init(int port);
